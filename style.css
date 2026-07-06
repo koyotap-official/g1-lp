@@ -1,0 +1,221 @@
+/* ==========================================================================
+   g1_creative_gate / lp — fake-door landing page styles
+   Mobile-first, base viewport ~390px, degrades gracefully to wider widths.
+   ========================================================================== */
+
+:root {
+  --color-bg: #0f1115;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #5a5a5a;
+  --color-accent: #ff5a36;
+  --color-accent-text: #ffffff;
+  --color-border: #e2e2e2;
+  --color-warning-bg: #fff4e5;
+  --color-warning-border: #f5a623;
+  --color-warning-text: #7a4b00;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, Arial, sans-serif;
+  color: var(--color-text);
+  background-color: #f6f6f8;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  background-color: var(--color-surface);
+  min-height: 100vh;
+}
+
+/* ---------- Hero / header ---------- */
+
+.hero {
+  text-align: center;
+  padding-top: 0;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 12px 12px;
+  margin: 0 -20px 24px;
+  width: calc(100% + 40px);
+  max-width: none;
+}
+
+#title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+#tagline {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin: 0 0 28px;
+}
+
+/* ---------- CTA ---------- */
+
+.cta-section {
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-accent-text);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.92;
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Form ---------- */
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+#signup-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+#signup-form input[type="email"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+}
+
+#signup-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 90, 54, 0.15);
+}
+
+.submit-button {
+  min-height: 44px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent-text);
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Thank-you state ---------- */
+
+.thank-you {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #e8f7ee;
+  border: 1px solid #34a853;
+  color: #1e6b34;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ---------- Config error state ---------- */
+
+.config-error {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  color: var(--color-warning-text);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-top: 24px;
+}
+
+/* ---------- Wider viewports ---------- */
+
+@media (min-width: 480px) {
+  body {
+    background-color: #e9e9ee;
+  }
+
+  .page {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .hero-image {
+    margin: 0 0 24px;
+    width: 100%;
+    border-radius: 0;
+  }
+}
